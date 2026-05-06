@@ -127,7 +127,3 @@ CORRELATED QUERY
 AGGREGATE FUNCTIONS
 DATE FUNCTIONS
 
-👩‍💻 Author
-Lakshmi Gowri Venneti
-Information Technology Student
-Passionate about Web Development, SQL, and Problem Solving
