@@ -42,7 +42,51 @@
 
       select * from Employees where salary=52000;
 
-3.COMPARISON OPERATORS
+3.GROUP BY
+
+    --Find total salary department-wise.
+
+      select department, SUM(salary) as total_salary from Employees Group by department;
+  
+    --Find average salary in each department.
+
+      select department, AVG(salary) as Average_salary from Employees Group by department;
+    
+    --Count employees in each city.
+
+      select city, count(employees) as count_employee from Employees Group by city;
+  
+    --Find maximum salary in each department.
+
+      select department, max(salary) from Employees Group by department;
+    
+    --Find minimum experience department-wise.
+
+      select department, min(experinence) from Employees Group by department;
+
+4.HAVING
+  
+    --Find departments having more than 3 employees.
+
+      select department, count(*) as total_employees from Employees Group by department having count(*) >3;
+  
+    --Find departments where average salary is greater than 60000.
+
+      select department, Avg(salary) as Avg_salary from Employees Group by department having Avg(salary) >60000;
+  
+    --Find cities having more than 2 employees.
+
+      select city, count(*) as total_employees from Employees Group by city having count(*) >2;
+  
+    --Find departments where total salary is greater than 200000.
+
+      select department, sum(salary) as total_salary from Employees Group by department having sum(salary) >200000;
+  
+    --Find departments where maximum salary is above 90000.
+
+      select department, max(salary) as max_salary from Employees Group by department having max(salary) >90000;
+
+5.COMPARISON OPERATORS
   
     --Find employees with salary >= 80000.
   
@@ -64,7 +108,7 @@
 
       select * from Employees where experience > 5;
   
-4.LOGICAL OPERATORS
+6.LOGICAL OPERATORS
   
     --Find employees from IT department AND salary greater than 70000.
 
@@ -86,7 +130,7 @@
 
       select * from Employees where department NOT IN ('Sales');
   
-5.IN AND NOT IN
+7.IN AND NOT IN
   
   --Find employees working in ('Hyderabad', 'Mumbai').
 
@@ -108,7 +152,7 @@
 
     select * from Employees where department not in('HR', 'Sales');
 
-6.BETWEEN
+8.BETWEEN
   
     --Find employees with salary BETWEEN 50000 AND 80000.
 
