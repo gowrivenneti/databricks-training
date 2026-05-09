@@ -28,11 +28,39 @@ AVG()
 COUNT()
 MAX()
 MIN()
+
 4. HAVING Clause
 
 HAVING is used to filter grouped data after applying the GROUP BY clause.
 
-5. Comparison Operators
+5.TOP Clause
+
+The TOP clause is used to retrieve a limited number of records from a table.
+
+It helps in:
+
+Fetching highest or lowest records
+Displaying ranked employee details
+Limiting query results
+
+Examples include:
+
+Top highest paid employees
+Employees with highest experience
+Top salaries department-wise
+
+6. DISTINCT Keyword
+
+The DISTINCT keyword is used to display only unique values from a column.
+
+It is useful for:
+
+Removing duplicate records
+Displaying unique departments
+Displaying unique cities
+Showing distinct salary values
+
+7. Comparison Operators
 
 Comparison operators are used to compare values in SQL conditions.
 
@@ -45,7 +73,7 @@ Not equal to (<>)
 Greater than or equal to (>=)
 Less than or equal to (<=)
 
-6. Logical Operators
+8. Logical Operators
 
 Logical operators combine multiple conditions in a query.
 
@@ -55,14 +83,14 @@ AND
 OR
 NOT
 
-7. IN and NOT IN Operators
+9. IN and NOT IN Operators
 
 These operators are used to check multiple values within a condition.
 
 IN → Matches values from a given list
 NOT IN → Excludes values from a given list
 
-8. BETWEEN Operator
+10. BETWEEN Operator
 
 BETWEEN is used to retrieve values within a specified range.
 
@@ -82,3 +110,19 @@ Department
 Salary
 City
 Experience
+
+11. LIKE Operator
+
+The LIKE operator is used for pattern matching in SQL.
+
+It helps in:
+
+Searching employee names by starting letters
+Finding names ending with specific characters
+Matching departments or cities with patterns
+
+Wildcards used:
+
+% → Multiple characters
+_ → Single character
+
