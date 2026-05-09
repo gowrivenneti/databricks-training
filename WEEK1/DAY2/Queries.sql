@@ -86,7 +86,51 @@
 
       select department, max(salary) as max_salary from Employees Group by department having max(salary) >90000;
 
-5.COMPARISON OPERATORS
+5.TOP
+
+    -- Display top 5 highest paid employees.
+
+      SELECT TOP 5 * FROM Employees ORDER BY salary DESC;
+
+    -- Display top 3 employees with highest experience.
+  
+      SELECT TOP 3 * FROM Employees ORDER BY experinence DESC;
+
+    -- Display top 2 salaries from Finance department.
+  
+      SELECT TOP 2 salary FROM Employees WHERE department='Finance' ORDER BY salary DESC;
+
+    -- Display top 4 employees from Hyderabad.
+    
+      SELECT TOP 4 * FROM Employees WHERE city='Hyderabad';
+
+    -- Display top 1 highest salary employee.
+
+      SELECT TOP 1 * FROM Employees ORDER BY salary DESC;
+
+6.DISTINCT
+
+    -- Display distinct department names.
+
+      SELECT DISTINCT department FROM Employees;
+
+    -- Display distinct city names.
+
+      SELECT DISTINCT city FROM Employees;
+
+    -- Display distinct salary values.
+
+      SELECT DISTINCT salary FROM Employees;
+
+    -- Display distinct combinations of department and city.
+
+      SELECT DISTINCT department, city FROM Employees;
+
+    -- Display distinct experience values.
+    
+      SELECT DISTINCT experinence FROM Employees;
+
+7.COMPARISON OPERATORS
   
     --Find employees with salary >= 80000.
   
@@ -108,7 +152,7 @@
 
       select * from Employees where experience > 5;
   
-6.LOGICAL OPERATORS
+8.LOGICAL OPERATORS
   
     --Find employees from IT department AND salary greater than 70000.
 
@@ -130,7 +174,7 @@
 
       select * from Employees where department NOT IN ('Sales');
   
-7.IN AND NOT IN
+9.IN AND NOT IN
   
   --Find employees working in ('Hyderabad', 'Mumbai').
 
@@ -152,7 +196,7 @@
 
     select * from Employees where department not in('HR', 'Sales');
 
-8.BETWEEN
+10.BETWEEN
   
     --Find employees with salary BETWEEN 50000 AND 80000.
 
@@ -172,4 +216,26 @@
   
     --Find employees with experience BETWEEN 2 AND 4.
 
-      select * from Employees where experinence BETWEEN 2 AND 4;
+    select * from Employees where experinence BETWEEN 2 AND 4;
+
+11.LIKE OPERATOR
+
+    -- Find employees whose names start with 'R'.
+  
+    SELECT * FROM Employees WHERE emp_name LIKE 'R%';
+
+    -- Find employees whose names end with 'a'.
+
+    SELECT * FROM Employees WHERE emp_name LIKE '%a';
+
+    -- Find employees whose names contain 'v'.
+  
+    SELECT * FROM Employees WHERE emp_name LIKE '%v%';
+
+    -- Find employees whose city starts with 'B'.
+
+    SELECT * FROM Employees WHERE city LIKE 'B%';
+
+    -- Find employees whose department ends with 's'.
+
+    SELECT * FROM Employees WHERE department LIKE '%s';
